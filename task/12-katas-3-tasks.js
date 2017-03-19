@@ -45,6 +45,23 @@ function findStringInSnakingPuzzle(puzzle, searchStr) {
  *    'abc' => 'abc','acb','bac','bca','cab','cba'
  */
 function* getPermutations(chars) {
+    // var result = [];
+    //
+    // function permute(arr, res) {
+    //     var curr, res = [] || res;
+    //
+    //     for (var i = 0; i < arr.length; i ++) {
+    //         curr = arr.splice(i, 1);
+    //         if (arr.length === 0) {
+    //             result.push(res.concat(curr));
+    //         }
+    //         permute(arr.slice(), res.concat(curr));
+    //         arr.splice(i, 0, curr[0]);
+    //     }
+    //     return result;
+    // }
+    //
+    //     return permute(chars.split(''));
     throw new Error('Not implemented');
 }
 

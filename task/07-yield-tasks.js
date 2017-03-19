@@ -82,6 +82,7 @@ function* getFibonacciSequence() {
  *
  */
 function* depthTraversalTree(root) {
+
     throw new Error('Not implemented');
 }
 
@@ -126,6 +127,9 @@ function* breadthTraversalTree(root) {
  *   [ 1, 3, 5, ... ], [ -1 ] => [ -1, 1, 3, 5, ...]
  */
 function* mergeSortedSequences(source1, source2) {
+    // for (var i = 0; i < source1.length; i ++) {
+    //     console.log(source1[i]);
+    // }
     throw new Error('Not implemented');
 }
 

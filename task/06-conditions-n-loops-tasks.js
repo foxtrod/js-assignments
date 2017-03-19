@@ -30,7 +30,15 @@
  *
  */
 function getFizzBuzz(num) {
-    throw new Error('Not implemented');
+    if (num % 3 === 0 && num % 5 === 0) {
+        return 'FizzBuzz'
+    } else if (num % 3 === 0) {
+        return 'Fizz'
+    } else if (num % 5 === 0) {
+        return 'Buzz'
+    } else {
+        return num;
+    }
 }
 
 
@@ -46,7 +54,9 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-    throw new Error('Not implemented');
+    if (n === 0 || n === 1) {
+        return 1;
+    } else return n * getFactorial(n - 1);
 }
 
 
@@ -63,7 +73,12 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
-    throw new Error('Not implemented');
+    var res = 0;
+    while (n1 <= n2) {
+        res += n1;
+        n1++;
+    }
+    return res;
 }
 
 
@@ -82,6 +97,7 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,10,10 =>  true
  */
 function isTriangle(a,b,c) {
+    // return a+b > c;
     throw new Error('Not implemented');
 }
 
@@ -119,6 +135,7 @@ function isTriangle(a,b,c) {
  *  
  */
 function doRectanglesOverlap(rect1, rect2) {
+
     throw new Error('Not implemented');
 }
 
@@ -150,7 +167,10 @@ function doRectanglesOverlap(rect1, rect2) {
  *   
  */
 function isInsideCircle(circle, point) {
-    throw new Error('Not implemented');
+    var dx = point.x - circle.center.x,
+        dy = point.y - circle.center.y,
+        dist = Math.sqrt(dx * dx + dy * dy);
+    return dist < circle.radius;
 }
 
 
@@ -166,7 +186,19 @@ function isInsideCircle(circle, point) {
  *   'entente' => null
  */
 function findFirstSingleChar(str) {
-    throw new Error('Not implemented');
+
+    for (var i = 0; i < str.length; i ++) {
+        var count = 0;
+        for (var j = 0; j < str.length; j ++) {
+            if (str[i] == str[j]) {
+                count ++;
+            }
+        }
+        if (count === 1) {
+            return str[i];
+        }
+    }
+    return null;
 }
 
 
@@ -209,7 +241,8 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
-    throw new Error('Not implemented');
+    return str.split('').reverse().join('');
+    // throw new Error('Not implemented');
 }
 
 
@@ -226,7 +259,7 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-    throw new Error('Not implemented');
+    return num.toString().split('').reverse().join('');
 }
 
 
@@ -270,7 +303,8 @@ function isCreditCardNumber(ccn) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 function getDigitalRoot(num) {
-    throw new Error('Not implemented');
+    var result = eval(num.toString().replace(/(\d)(?=\d)/g, '$1+'));
+    return result.toString().length === 1 ? result : getDigitalRoot(result);
 }
 
 
@@ -356,7 +390,7 @@ function timespanToHumanString(startDate, endDate) {
  *    365, 10 => '365'
  */
 function toNaryString(num, n) {
-    throw new Error('Not implemented');
+    return (num >>> 0).toString(n);
 }
 
 
@@ -431,7 +465,36 @@ function getMatrixProduct(m1, m2) {
  *
  */
 function evaluateTicTacToePosition(position) {
+    // for (var i = 0; i < 3; i ++) {
+    //     var row = position[i];
+    //     if (row[0] == row[1] && row[1] == row[2]) {
+    //         return row[0];
+    //     }
+    // }
+    // for (var i = 0; i < 3; i ++) {
+    //     if (position[0][i] == position[1][i] && position[1][i] == position[2][i]) {
+    //         return position[0][i];
+    //     }
+    // }
+    // if (position[0][0] == position[1][1] && position[1][1] == position[2][2]) {
+    //     return position[0][0];
+    // } else if (position[0][2] == position[1][1] && position[1][1] == position[2][0]) {
+    //     return position[0][2];
+    // }
+
+
+    // // diagonals
+    // if (this._board[0][0] == this._board[1][1] && this._board[1][1] == this._board[2][2]) {
+    //     return this._board[0][0];
+    // }
+    //
+    // if (this._board[0][2] == this._board[1][1] && this._board[1][1] == this._board[2][0]) {
+    //     return this._board[0][2];
+    // }
+
+
     throw new Error('Not implemented');
+
 }
 
 

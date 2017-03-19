@@ -88,6 +88,12 @@ function* expandBraces(str) {
  *
  */
 function getZigZagMatrix(n) {
+
+    // var a = [];
+    // for (var i = 0; i < n; i ++) {
+    //
+    // }
+
     throw new Error('Not implemented');
 }
 
